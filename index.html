@@ -616,6 +616,8 @@
         .compact-form { display: flex; flex-direction: column; gap: 6px; }
         .compact-form input[type="email"],
         .compact-form input[type="text"],
+        .compact-form input[type="tel"],
+        .compact-form input[type="url"],
         .compact-form textarea,
         .compact-form select {
             width: 100%;
@@ -883,6 +885,11 @@
         <span class="signal-label">Humanity Premium</span>
         <span class="signal-desc">Imperfection wins</span>
     </a>
+    <a class="signal-pill" href="DENTAL.html" style="text-decoration:none;color:inherit;">
+        <span class="signal-icon">🦷</span>
+        <span class="signal-label">OPTIMIZE</span>
+        <span class="signal-desc">Dental practices</span>
+    </a>
 </nav>
 
 <!-- 3-COLUMN NEWSPAPER LAYOUT -->
@@ -1046,6 +1053,82 @@
         <!-- LEAD ARTICLE -->
         <article>
             <div class="section-label">Lead Editorial</div>
+            <h2 class="article-headline">Owner-Operator Service Businesses Wear Many Hats. Here Is How to Get Them Working Together.</h2>
+            <div class="article-subhead">A field note for service-business owners who sell, schedule, serve, manage, follow up, market, hire, invoice, and still have to answer the phone.</div>
+            <p class="byline">By Algo Editorial Board | <a href="https://www.algocontentseo.com">AlgoContentSeo.com</a> | 6-24-2026</p>
+
+            <p class="drop-cap-p">Owner-operator service businesses run on too many hats because the owner is usually the system: sales in the morning, client service by noon, payroll after lunch, callbacks between appointments, marketing after dinner, and strategy whenever there is a quiet hour left. The fix is not to add more tools or make the owner work harder. The fix is to make each hat hand off cleanly to the next one. Your website should tell the right local customer what you do and why to trust you. Your form should capture the lead without friction. Your follow-up should respond before the customer cools off. Your calendar should protect production time. Your reviews should feed search visibility. Your reporting should show which work brings revenue, not just which post got attention. When those pieces are connected, the business stops feeling like a stack of emergencies and starts behaving like an operating system: every inquiry has a path, every customer has a next step, and every hour the owner spends in the business has a better chance of turning into booked work, repeat business, and compounding local visibility.</p>
+
+            <!-- MID-LEAD CONTACT FORM -->
+            <div class="service-section" id="contact-us">
+                <div class="section-label">Contact Us</div>
+                <h3>Get the hats working together.</h3>
+                <p>If you want a cleaner lead path, better local search presence, or a second set of eyes on where prospects are slipping away, send the details here.</p>
+                <form id="leadContactForm" class="compact-form" action="https://submit-zuirpy7nza-uc.a.run.app" method="POST" novalidate>
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="lead_website">Website</label>
+                        <input type="text" name="website" id="lead_website" tabindex="-1" autocomplete="off" value="">
+                    </div>
+                    <input type="hidden" name="form_time" id="lead_form_time" value="">
+                    <input type="hidden" name="source" value="algocontentseo_lead_editorial">
+                    <input type="hidden" name="page" value="index.html">
+                    <input type="text" name="name" id="lead_name" placeholder="Name" required autocomplete="name">
+                    <input type="email" name="email" id="lead_email" placeholder="Email Address" required autocomplete="email">
+                    <input type="tel" name="phone" id="lead_phone" placeholder="Phone (optional)" autocomplete="tel">
+                    <select name="interest" id="lead_interest">
+                        <option value="">What should we optimize?</option>
+                        <option value="service-business-operations">Service business operations</option>
+                        <option value="local-seo">Local SEO</option>
+                        <option value="website-conversion">Website conversion</option>
+                        <option value="dental-practice">Dental practice marketing</option>
+                        <option value="ai-workflows">AI workflows</option>
+                    </select>
+                    <textarea name="message" id="lead_message" rows="3" placeholder="What is not working yet?"></textarea>
+                    <input type="text" name="human_check" id="lead_human_check" placeholder="Bot check: type 24" inputmode="numeric" autocomplete="off" required>
+                    <button type="submit" id="leadContactBtn">Contact Us</button>
+                    <div id="leadContactFeedback" style="display:none;font-family:'Lato',sans-serif;font-size:11px;padding:6px;text-align:center;"></div>
+                </form>
+                <p style="font-family:'Lato',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#7a5c3a;margin-top:8px;">Protected with a honeypot, timing check, and human prompt.</p>
+                <p style="margin-top:12px;"><strong><a href="DENTAL.html">OPTIMIZE for Los Angeles Dental Practices</a>:</strong> local, responsive consulting for dental practice web optimization, search visibility, and marketing across Encino, Beverly Hills, Burbank, West LA, Venice, Culver City, Pacific Palisades, Malibu, Brentwood, Santa Monica, and greater Los Angeles.</p>
+            </div>
+
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Algo Content SEO",
+              "url": "https://www.algocontentseo.com/",
+              "areaServed": [
+                "Los Angeles",
+                "Santa Monica",
+                "Encino",
+                "Beverly Hills",
+                "Burbank",
+                "West LA",
+                "Venice",
+                "Culver City",
+                "Pacific Palisades",
+                "Malibu",
+                "Brentwood"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1411 5th Street",
+                "addressLocality": "Santa Monica",
+                "addressRegion": "CA",
+                "postalCode": "90401",
+                "addressCountry": "US"
+              },
+              "serviceType": [
+                "Local SEO consulting",
+                "Dental website optimization",
+                "Marketing automation",
+                "Service business operations optimization"
+              ]
+            }
+            </script>
+
+            <div class="section-label">Lead Editorial · Previous Feature</div>
             <h2 class="article-headline">The Secret Everyone's Whispering About: How to Get Your Time Back — and What to Do With It</h2>
             <div class="article-subhead">While AI rewrites your emails, interior design rebels against gray. While energy prices climb, dividend investors find calm. While algorithms battle for attention, craft culture finds its hands.</div>
             <p class="byline">By Algo Editorial Board | <a href="https://www.algocontentseo.com">AlgoContentSeo.com</a> | Spring 2026</p>
@@ -1716,6 +1799,79 @@ function showFeedback(el, msg, color) {
     el.style.fontFamily = "'Lato', sans-serif";
     el.textContent = msg;
 }
+
+// ── MID-ARTICLE CONTACT FORM ───────────────────
+const leadFormTimeField = document.getElementById('lead_form_time');
+if (leadFormTimeField) leadFormTimeField.value = Date.now();
+
+document.getElementById('leadContactForm')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const feedback = document.getElementById('leadContactFeedback');
+    const btn = document.getElementById('leadContactBtn');
+    const hp = document.getElementById('lead_website');
+
+    if (hp && hp.value.trim() !== '') {
+        showFeedback(feedback, 'Thank you. Your note was received.', '#2a6e2a');
+        this.reset();
+        return;
+    }
+
+    const loadTime = parseInt(leadFormTimeField?.value || '0');
+    if (loadTime && (Date.now() - loadTime) < 3000) {
+        showFeedback(feedback, 'Please wait a moment before submitting.', '#8b1a1a');
+        return;
+    }
+
+    const name = document.getElementById('lead_name')?.value?.trim() || '';
+    const email = document.getElementById('lead_email')?.value?.trim() || '';
+    const humanCheck = document.getElementById('lead_human_check')?.value?.trim() || '';
+
+    if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showFeedback(feedback, 'Please add your name and a valid email address.', '#8b1a1a');
+        return;
+    }
+
+    if (humanCheck !== '24') {
+        showFeedback(feedback, 'Please complete the bot check.', '#8b1a1a');
+        return;
+    }
+
+    btn.textContent = 'SENDING...';
+    btn.disabled = true;
+
+    try {
+        const payload = {
+            name,
+            email,
+            phone: document.getElementById('lead_phone')?.value?.trim() || '',
+            interest: document.getElementById('lead_interest')?.value || '',
+            message: document.getElementById('lead_message')?.value?.trim() || '',
+            source: 'algocontentseo_lead_editorial',
+            page: 'index.html',
+            submitted_at: new Date().toISOString()
+        };
+
+        const response = await fetch(this.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+            showFeedback(feedback, 'Thank you. We will follow up shortly.', '#2a6e2a');
+            this.reset();
+            if (leadFormTimeField) leadFormTimeField.value = Date.now();
+        } else {
+            showFeedback(feedback, 'Something went wrong. Please try again.', '#8b1a1a');
+        }
+    } catch (err) {
+        showFeedback(feedback, 'Network error. Please try again.', '#8b1a1a');
+    } finally {
+        btn.textContent = 'Contact Us';
+        btn.disabled = false;
+    }
+});
 
 // ── POLLS ──────────────────────────────────────
 function handleTrendPoll(e) {
