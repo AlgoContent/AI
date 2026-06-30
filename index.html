@@ -646,6 +646,43 @@
             transition: background 0.2s;
         }
         .compact-form button[type="submit"]:hover { background: var(--accent); }
+        .signal-contact-link {
+            display: block;
+            background: #39ff14;
+            color: #071a05;
+            border: none;
+            padding: 10px 12px;
+            font-family: 'Lato', sans-serif;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 0 12px rgba(57, 255, 20, 0.75), 0 0 24px rgba(57, 255, 20, 0.35);
+            animation: signalBlink 1.25s ease-in-out infinite;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+        }
+        .signal-contact-link:hover {
+            background: #7cff5a;
+            color: #071a05;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 0 18px rgba(57, 255, 20, 0.95), 0 0 36px rgba(57, 255, 20, 0.55);
+        }
+        @keyframes signalBlink {
+            0%, 100% {
+                background: #39ff14;
+                box-shadow: 0 0 10px rgba(57, 255, 20, 0.7), 0 0 22px rgba(57, 255, 20, 0.35);
+            }
+            50% {
+                background: #b6ff00;
+                box-shadow: 0 0 22px rgba(182, 255, 0, 1), 0 0 46px rgba(182, 255, 0, 0.7);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .signal-contact-link { animation: none; }
+        }
         .algo-source-tag {
             font-family: 'Lato', sans-serif;
             font-size: 9px;
@@ -1062,33 +1099,12 @@
             <!-- MID-LEAD CONTACT FORM -->
             <div class="service-section" id="contact-us">
                 <div class="section-label">Contact Us</div>
-                <h3>Get the hats working together.</h3>
+                <h3>We are local and responsive.</h3>
                 <p>If you want a cleaner lead path, better local search presence, or a second set of eyes on where prospects are slipping away, send the details here.</p>
-                <form id="leadContactForm" class="compact-form" action="https://submit-zuirpy7nza-uc.a.run.app" method="POST" novalidate>
-                    <div class="hp-field" aria-hidden="true">
-                        <label for="lead_website">Website</label>
-                        <input type="text" name="website" id="lead_website" tabindex="-1" autocomplete="off" value="">
-                    </div>
-                    <input type="hidden" name="form_time" id="lead_form_time" value="">
-                    <input type="hidden" name="source" value="algocontentseo_lead_editorial">
-                    <input type="hidden" name="page" value="index.html">
-                    <input type="text" name="name" id="lead_name" placeholder="Name" required autocomplete="name">
-                    <input type="email" name="email" id="lead_email" placeholder="Email Address" required autocomplete="email">
-                    <input type="tel" name="phone" id="lead_phone" placeholder="Phone (optional)" autocomplete="tel">
-                    <select name="interest" id="lead_interest">
-                        <option value="">What should we optimize?</option>
-                        <option value="service-business-operations">Service business operations</option>
-                        <option value="local-seo">Local SEO</option>
-                        <option value="website-conversion">Website conversion</option>
-                        <option value="dental-practice">Dental practice marketing</option>
-                        <option value="ai-workflows">AI workflows</option>
-                    </select>
-                    <textarea name="message" id="lead_message" rows="3" placeholder="What is not working yet?"></textarea>
-                    <input type="text" name="human_check" id="lead_human_check" placeholder="Bot check: type 24" inputmode="numeric" autocomplete="off" required>
-                    <button type="submit" id="leadContactBtn">Contact Us</button>
-                    <div id="leadContactFeedback" style="display:none;font-family:'Lato',sans-serif;font-size:11px;padding:6px;text-align:center;"></div>
-                </form>
-                <p style="font-family:'Lato',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#7a5c3a;margin-top:8px;">Protected with a honeypot, timing check, and human prompt.</p>
+                <p>Schedule a consult or contact us directly on Signal.</p>
+                <div class="compact-form" aria-label="Contact Algo Content SEO on Signal">
+                    <a class="signal-contact-link" href="https://signal.me/#eu/1-WJZGHmnefxJLiKEuUztOlwDFmihlgZhN6ZMvf82fL5Ja607iNLa6ne5zh3WONV" target="_blank" rel="noopener">Schedule a Consult on Signal</a>
+                </div>
                 <p style="margin-top:12px;"><strong><a href="DENTAL.html">OPTIMIZE for Los Angeles Dental Practices</a>:</strong> local, responsive consulting for dental practice web optimization, search visibility, and marketing across Encino, Beverly Hills, Burbank, West LA, Venice, Culver City, Pacific Palisades, Malibu, Brentwood, Santa Monica, and greater Los Angeles.</p>
             </div>
 
@@ -1527,33 +1543,14 @@ We don't just make content. We make content that works with the algorithm — fa
             </ul>
         </div>
 
-        <!-- NEWSLETTER FORM — BOT PROTECTED -->
+        <!-- SIGNAL CONTACT -->
         <div class="widget-box contact-widget">
-            <h4>Subscribe &amp; Connect</h4>
-            <p class="small-text">Join the Algo List — Small Business Tech &amp; Strategy. Weekly signals, no noise.</p>
-            <form id="algoForm" class="compact-form" novalidate>
-                <!-- HONEYPOT — hidden from real users, bots fill it -->
-                <div class="hp-field" aria-hidden="true">
-                    <input type="text" name="website" id="hp_website" tabindex="-1" autocomplete="off" value="">
-                </div>
-                <input type="email" name="email" id="sub_email" placeholder="Email Address" required autocomplete="email">
-                <select name="interest" id="sub_interest">
-                    <option value="">I'm most interested in…</option>
-                    <option value="ai-productivity">AI &amp; Productivity</option>
-                    <option value="dividend-finance">Dividend Finance &amp; Energy</option>
-                    <option value="diy-home-decor">DIY &amp; Home Decor</option>
-                    <option value="music-culture">Music &amp; Culture</option>
-                    <option value="real-estate">Real Estate Finance</option>
-                    <option value="growth-marketing-local-seo">Growth Marketing &amp; Local SEO</option>
-                </select>
-                <textarea name="message" id="sub_message" rows="2" placeholder="Your Inquiry (optional)…"></textarea>
-                <!-- Timing trap: form submitted too fast = bot -->
-                <input type="hidden" name="form_time" id="form_time" value="">
-                <input type="hidden" name="source" value="algocontentseo">
-                <button type="submit" id="subBtn">SEND →</button>
-                <div id="formFeedback" style="display:none;font-family:'Lato',sans-serif;font-size:11px;padding:6px;text-align:center;"></div>
-            </form>
-            <div class="algo-source-tag">Response via <strong>AlgoContentSeo</strong></div>
+            <h4>Connect on Signal</h4>
+            <p class="small-text">For business management, growth marketing, local SEO, or dental practice optimization, message us directly.</p>
+            <div class="compact-form" aria-label="Message Algo Content SEO on Signal">
+                <a class="signal-contact-link" href="https://signal.me/#eu/1-WJZGHmnefxJLiKEuUztOlwDFmihlgZhN6ZMvf82fL5Ja607iNLa6ne5zh3WONV" target="_blank" rel="noopener">Message on Signal</a>
+            </div>
+            <div class="algo-source-tag">Response via <strong>Signal</strong></div>
         </div>
 
         <!-- TREND PREDICTOR POLL -->
@@ -1722,156 +1719,6 @@ function carouselPrev() { goToSlide(currentSlide - 1); }
 // Auto-advance every 6 seconds
 setInterval(carouselNext, 6000);
 initCarousel();
-
-// ── BOT-PROTECTED NEWSLETTER FORM ──────────────
-// Record form load time to detect instant (bot) submissions
-const formTimeField = document.getElementById('form_time');
-if (formTimeField) formTimeField.value = Date.now();
-
-document.getElementById('algoForm')?.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const feedback = document.getElementById('formFeedback');
-    const btn = document.getElementById('subBtn');
-
-    // 1. Honeypot check — if filled, silently fake success
-    const hp = document.getElementById('hp_website');
-    if (hp && hp.value.trim() !== '') {
-        showFeedback(feedback, 'Thank you! You\'re on the list.', '#2a6e2a');
-        this.reset();
-        return;
-    }
-
-    // 2. Timing check — less than 2 seconds = likely bot
-    const loadTime = parseInt(formTimeField?.value || '0');
-    if (loadTime && (Date.now() - loadTime) < 2000) {
-        showFeedback(feedback, 'Please wait a moment before submitting.', '#8b1a1a');
-        return;
-    }
-
-    // 3. Email validation
-    const email = document.getElementById('sub_email')?.value?.trim();
-    if (!email || !email.includes('@')) {
-        showFeedback(feedback, 'Please enter a valid email address.', '#8b1a1a');
-        return;
-    }
-
-    btn.textContent = 'SENDING…';
-    btn.disabled = true;
-
-    try {
-        const interest = document.getElementById('sub_interest')?.value || '';
-        const message = document.getElementById('sub_message')?.value?.trim() || '';
-
-        const payload = {
-            email,
-            interest,
-            message,
-            source: 'algocontentseo',
-            submitted_at: new Date().toISOString()
-        };
-
-        const response = await fetch('https://submit-zuirpy7nza-uc.a.run.app', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        if (response.ok) {
-            showFeedback(feedback, '✓ You\'re on the Algo List! Watch your inbox.', '#2a6e2a');
-            this.reset();
-            if (formTimeField) formTimeField.value = Date.now();
-        } else {
-            showFeedback(feedback, 'Something went wrong. Please try again.', '#8b1a1a');
-        }
-    } catch (err) {
-        showFeedback(feedback, 'Network error — please try again.', '#8b1a1a');
-    } finally {
-        btn.textContent = 'SEND →';
-        btn.disabled = false;
-    }
-});
-
-function showFeedback(el, msg, color) {
-    if (!el) return;
-    el.style.display = 'block';
-    el.style.color = color;
-    el.style.fontFamily = "'Lato', sans-serif";
-    el.textContent = msg;
-}
-
-// ── MID-ARTICLE CONTACT FORM ───────────────────
-const leadFormTimeField = document.getElementById('lead_form_time');
-if (leadFormTimeField) leadFormTimeField.value = Date.now();
-
-document.getElementById('leadContactForm')?.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const feedback = document.getElementById('leadContactFeedback');
-    const btn = document.getElementById('leadContactBtn');
-    const hp = document.getElementById('lead_website');
-
-    if (hp && hp.value.trim() !== '') {
-        showFeedback(feedback, 'Thank you. Your note was received.', '#2a6e2a');
-        this.reset();
-        return;
-    }
-
-    const loadTime = parseInt(leadFormTimeField?.value || '0');
-    if (loadTime && (Date.now() - loadTime) < 3000) {
-        showFeedback(feedback, 'Please wait a moment before submitting.', '#8b1a1a');
-        return;
-    }
-
-    const name = document.getElementById('lead_name')?.value?.trim() || '';
-    const email = document.getElementById('lead_email')?.value?.trim() || '';
-    const humanCheck = document.getElementById('lead_human_check')?.value?.trim() || '';
-
-    if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showFeedback(feedback, 'Please add your name and a valid email address.', '#8b1a1a');
-        return;
-    }
-
-    if (humanCheck !== '24') {
-        showFeedback(feedback, 'Please complete the bot check.', '#8b1a1a');
-        return;
-    }
-
-    btn.textContent = 'SENDING...';
-    btn.disabled = true;
-
-    try {
-        const payload = {
-            name,
-            email,
-            phone: document.getElementById('lead_phone')?.value?.trim() || '',
-            interest: document.getElementById('lead_interest')?.value || '',
-            message: document.getElementById('lead_message')?.value?.trim() || '',
-            source: 'algocontentseo_lead_editorial',
-            page: 'index.html',
-            submitted_at: new Date().toISOString()
-        };
-
-        const response = await fetch(this.action, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        if (response.ok) {
-            showFeedback(feedback, 'Thank you. We will follow up shortly.', '#2a6e2a');
-            this.reset();
-            if (leadFormTimeField) leadFormTimeField.value = Date.now();
-        } else {
-            showFeedback(feedback, 'Something went wrong. Please try again.', '#8b1a1a');
-        }
-    } catch (err) {
-        showFeedback(feedback, 'Network error. Please try again.', '#8b1a1a');
-    } finally {
-        btn.textContent = 'Contact Us';
-        btn.disabled = false;
-    }
-});
 
 // ── POLLS ──────────────────────────────────────
 function handleTrendPoll(e) {
